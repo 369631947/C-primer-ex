@@ -1,0 +1,49 @@
+// 第三章.cpp : 定义控制台应用程序的入口点。
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include <string>
+
+using std::cout;
+using std::endl;
+using std::cin;
+using std::string;
+using std::getline;
+
+//int _tmain(int argc, _TCHAR* argv[])
+//{
+//	string s1;
+//	string s2;
+//	while (cin >> s1 >> s2)
+//	{
+//		if (s1.size() == s2.size())
+//			cout << "s1=s2" << endl;
+//		else
+//			cout << "The larger one is " << ((s1.size() > s2.size()) ? s1 : s2);
+//	}
+//	return 0;
+//}
+
+void main()
+{
+	string str;
+	string largeStr;
+	while (cin >> str)
+	{
+		if (largeStr.empty())
+		{
+			largeStr += str;
+		}
+		else
+		{
+			largeStr += " " + str;
+		}
+		if (str == "0")
+		{
+			break;
+		}
+	}
+
+	cout << "The large string is " << largeStr << endl;
+}
